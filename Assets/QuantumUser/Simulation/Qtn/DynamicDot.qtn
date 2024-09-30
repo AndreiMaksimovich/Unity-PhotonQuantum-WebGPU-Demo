@@ -1,0 +1,5 @@
+component DynamicDot {
+    int Index;
+}
+
+synced event OnDotsInstantiated {}

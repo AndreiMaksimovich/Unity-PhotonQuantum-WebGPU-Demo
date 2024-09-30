@@ -1,0 +1,6 @@
+input {
+	FPVector2 Direction;
+	button ButtonBoost;
+	button ButtonShoot;
+}
+

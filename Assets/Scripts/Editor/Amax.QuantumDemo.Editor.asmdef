@@ -1,0 +1,21 @@
+{
+    "name": "Amax.QuantumDemo.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:09cf619ae110c4ba3a4caff73d7f5120",
+        "GUID:3dc2666f1394e2c48a30ea492efb1717",
+        "GUID:f6fa0c2f8b9a9f64897d3351666f3d66",
+        "GUID:5d82202959c2f144ea95e134645b6833"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

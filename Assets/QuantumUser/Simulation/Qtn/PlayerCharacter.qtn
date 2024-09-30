@@ -1,0 +1,20 @@
+component PlayerCharacter {
+    player_ref PlayerRef;
+    int Score;
+    int ShootFrame;
+    int SpawnFrame;
+}
+
+signal SpawnPlayerCharacter(EntityRef playerEntityRef);
+
+signal RespawnPlayerCharacter(EntityRef playerEntityRef);
+
+synced event OnPlayerCharacterAdded {
+    player_ref Player;
+    EntityRef PlayerCharacter;
+}
+
+synced event OnPlayerCharacterRemoved {
+    player_ref Player;
+    EntityRef PlayerCharacter;
+}

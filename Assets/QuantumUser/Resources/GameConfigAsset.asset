@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e69895c96c93f45a5ff80b021a3422, type: 3}
+  m_Name: GameConfigAsset
+  m_EditorClassIdentifier: 
+  Identifier:
+    Path: QuantumUser/Resources/GameConfigAsset
+    Guid:
+      Value: 316527076537738773
+  minDistanceToPointer: 0.25
+  playerSpeed:
+    RawValue: 327680
+  playerSpeedBoost:
+    RawValue: 98304
+  playerShootPeriodicity: 15
+  playerPrototype: {fileID: 3097001405596171208, guid: 5470ffb9f634baa4ca95e09bfc990dea, type: 3}
+  playerProjectileSpeed:
+    RawValue: 655360
+  playerProjectileLifeTime: 90
+  playerProjectilePrototype: {fileID: 3097001405596171208, guid: c235e4242ca564ae9b00c9e1f29960a4, type: 3}
+  dotCount: 0
+  dotPrototype: {fileID: 3097001405596171208, guid: 0161f2b01066244b79534444111fd15f, type: 3}
+  dotsToUpdatePerFrame: 100
+  spawnDispawnAnimationDuration: 0.5
+  dotRespawnDuration: 120
+  mapSize:
+    X:
+      RawValue: 6553600
+    Y:
+      RawValue: 6553600

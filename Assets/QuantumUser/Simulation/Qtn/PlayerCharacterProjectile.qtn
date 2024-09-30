@@ -1,0 +1,9 @@
+component PlayerCharacterProjectile {
+    int DeathFrame;
+    FPVector2 Direction;
+    entity_ref PlayerCharacter;
+}
+
+signal SpawnPlayerCharacterProjectile(EntityRef playerEntityRef, FPVector2 direction, FPVector2 position);
+
+signal DestroyPlayerCharacterProjectile(EntityRef projectileEntityRef);
