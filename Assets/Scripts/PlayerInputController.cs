@@ -2,13 +2,11 @@ using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Input = UnityEngine.Input;
 
 namespace Amax.QuantumDemo
 {
-
     [RequireComponent(typeof(PlayerInput))]
-    public class PlayerInputController : GameSingleton<PlayerInputController>
+    public class PlayerInputController : GameSingleton<PlayerInputController>, IEventBusListener<OnLocalPlayerCharacterAdded>
     {
         public Vector2 Direction { get; private set; }
         public Vector2 PointerPosition { get; private set; }
@@ -43,13 +41,19 @@ namespace Amax.QuantumDemo
         public GameObject PlayerGameObject
         {
             get => _playerGameObject;
-            set => _playerGameObject = value;
+            private set => _playerGameObject = value;
         }
 
         private void Start()
         {
             QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
             Mode = RuntimePlatformUtil.IsMobile() ? EMode.Touchscreen : EMode.KeyboardAndMouse;
+            EventBus.AddListener(this);
+        }
+
+        private void OnDestroy()
+        {
+            EventBus.RemoveListener(this);
         }
 
         private void PollInput(CallbackPollInput callback)
@@ -135,6 +139,11 @@ namespace Amax.QuantumDemo
             {
                 EventBus.Raise(new OnPlayerInputModeChanged(mode));
             }
+        }
+
+        public void OnEvent(OnLocalPlayerCharacterAdded data)
+        {
+            PlayerGameObject = data.GameObject;
         }
     }
 

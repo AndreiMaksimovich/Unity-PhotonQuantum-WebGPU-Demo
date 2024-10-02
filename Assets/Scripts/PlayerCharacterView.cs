@@ -12,8 +12,7 @@ namespace Amax.QuantumDemo
             var player = frame.Get<PlayerCharacter>(EntityRef);
             if (frame.IsPlayerVerifiedOrLocal(player.PlayerRef))
             {
-                PlayerInputController.Instance.PlayerGameObject = gameObject;
-                PlayerCamera.Instance.PlayerGameObject = gameObject;
+                OnLocalPlayerCharacterAdded.Raise(player.PlayerRef, EntityRef, gameObject);
             }
             OnPlayerCharacterAdded.Raise(player.PlayerRef, EntityRef);
         }

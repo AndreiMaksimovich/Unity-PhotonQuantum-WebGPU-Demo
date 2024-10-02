@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Amax.QuantumDemo
 {
-
     public class PlayerColors : GameSingleton<PlayerColors>
     {
 
@@ -22,7 +21,5 @@ namespace Amax.QuantumDemo
             if (!player.IsValid) return Color.magenta;
             return colors[(int) player._index - 1];
         }
-
     }
-
 }

@@ -5,6 +5,7 @@ This demo was created to see how Photon Quantum and WebGPU behave together, and 
 - Is it possible to render a large number of static Photon Quantum Entities using Graphics.RenderMeshInstanced.
 - Does it make sense to add bucketing systems to such a rendering.
 - How effective are these methods compared to classic rendering.
+- How effective is GPU skinning in WebGPU.
 
 ### How To Install
 Replace "App Id Quantum" in Assets/QuantumUser/Resources/PhotonServerSettings.asset

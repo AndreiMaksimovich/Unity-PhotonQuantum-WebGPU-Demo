@@ -98,5 +98,22 @@ MonoBehaviour:
       GameConfig:
         Id:
           Value: 316527076537738773
+  - Name: 'Demo: Animated Characters'
+    ScenePath: Assets/Scenes/Demo_AnimatedCharacters.unity
+    Preview: {fileID: -2084631843, guid: 702497e61243044518c261b2da37fc99, type: 3}
+    RuntimeConfig:
+      Seed: 328516595
+      Map:
+        Id:
+          Value: 371115908879655756
+      SimulationConfig:
+        Id:
+          Value: 442089458455835007
+      SystemsConfig:
+        Id:
+          Value: 285306802963724605
+      GameConfig:
+        Id:
+          Value: 316527076537738773
   _machineId: {fileID: -755480892457977500, guid: fbd1d0c57fd428c44b08e505acb8d851, type: 3}
   _codeGenerator: {fileID: 11400000, guid: e38f1fac5a1a5c94da2b4ef21bd48419, type: 2}

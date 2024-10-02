@@ -1,4 +1,5 @@
 using Quantum;
+using UnityEngine;
 
 namespace Amax.QuantumDemo
 {
@@ -13,7 +14,20 @@ namespace Amax.QuantumDemo
             PlayerCharacter = playerCharacter;
         }
     }
-    
+
+    public class OnLocalPlayerCharacterAdded : PlayerCharacterBaseEvent
+    {
+        public readonly GameObject GameObject;
+
+        private OnLocalPlayerCharacterAdded(PlayerRef player, EntityRef playerCharacter, GameObject gameObject) : base(player, playerCharacter)
+        {
+            GameObject = gameObject;
+        }
+        public static void Raise(PlayerRef player, EntityRef playerCharacter, GameObject gameObject)
+        {
+            EventBus.Raise(new OnLocalPlayerCharacterAdded(player, playerCharacter, gameObject));
+        }
+    }
 
     public class OnPlayerCharacterAdded : PlayerCharacterBaseEvent
     {
